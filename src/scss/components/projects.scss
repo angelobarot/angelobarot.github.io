@@ -1,0 +1,13 @@
+
+.projects {
+  height: $full-screen-height;
+  background-color: $grey-lighten-2;
+
+  .project-card {
+    margin: 3px;
+  }
+
+  .project-card-container {
+    box-shadow: none;
+  }
+}

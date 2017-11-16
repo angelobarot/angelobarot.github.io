@@ -1,0 +1,13 @@
+.about {
+  height: $full-screen-height;
+  background-color: $grey-lighten-4;
+
+  img {
+    height: 350px;
+    width: 350px;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,36 @@
+
+.container {
+  height: $full-screen-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .home {
+    .my-image {
+      font-size: 30rem;
+    }
+
+    h3 {
+      color: $grey-darken-4;
+      font-family: $roboto-mono;
+    }
+
+    ul {
+      padding: 0;
+      li {
+        display: inline-block;
+        font-size: 2rem;
+        margin: 5px 10px 5px 10px;
+        padding: 5px 15px 5px 15px;
+        border-radius: 100%;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+
+        a {
+          color: $grey-darken-4;
+        }
+      }
+    }
+  }
+}

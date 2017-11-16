@@ -1,0 +1,30 @@
+
+.nav-list {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  ul {
+    list-style: none;
+    li {
+      padding: 5px;
+      color: $grey-darken-4;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      .active {
+        text-decoration: underline;
+      }
+
+      a {
+        color: $grey-darken-4;
+        text-decoration: none;
+        font-family: $roboto-mono;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import url('https://unpkg.com/vuetify/dist/vuetify.min.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800|Open+Sans:300,400,600,700,800|Raleway:300,400,500,600,700,800|Ubuntu:300,400,500,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@import 'variables';
+@import './components/global';
+@import './components/navheader';
+@import './components/home';
+@import './components/about';
+@import './components/services';
+@import './components/projects';
+@import './components/contact';
+@import './components/navlist';
