@@ -4,7 +4,7 @@
   "description": "A portfolio using VueJS",
   "author": "John Angelo Castillo Barot",
   "private": true,
-  "homepage": "https://github.com/jangelo08/jangelo08.github.io",
+  "homepage": "https://github.com/angelobarot/angelobarot.github.io",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
