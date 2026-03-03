@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angelo — Full Stack Engineer</title>
+<meta name="description" content="Full stack engineer with 8 years of experience building products end-to-end. Available for freelance and contract work worldwide.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://angelobarot.com/">
+<meta name="theme-color" content="#f9f7f4">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://angelobarot.com/">
+<meta property="og:title"       content="Angelo — Full Stack Engineer">
+<meta property="og:description" content="Full stack engineer with 8 years of experience building products end-to-end. Available for freelance and contract work worldwide.">
+<meta property="og:image"       content="https://angelobarot.com/og-image.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:site"        content="@0x4ngelo">
+<meta name="twitter:title"       content="Angelo — Full Stack Engineer">
+<meta name="twitter:description" content="Full stack engineer with 8 years of experience building products end-to-end. Available for freelance and contract work worldwide.">
+<meta name="twitter:image"       content="https://angelobarot.com/og-image.png">
+
+<!-- JSON-LD Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Angelo Barot",
+  "url": "https://angelobarot.com",
+  "jobTitle": "Full Stack Engineer",
+  "description": "Full stack engineer with 8 years of experience building products end-to-end.",
+  "sameAs": [
+    "https://www.linkedin.com/in/john-angelo-castillo-barot-655787130",
+    "https://twitter.com/0x4ngelo"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:      #f9f7f4;
+  --surface: #ffffff;
+  --ink:     #18181b;
+  --ink-2:   #52525b;
+  --ink-3:   #6b7280;
+  --rule:    #e4e4e7;
+  --nav-w:   240px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  padding-left: var(--nav-w);
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.in { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
+.d4 { transition-delay: 0.4s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── LEFT SIDEBAR NAV ── */
+.side-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--nav-w);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  isolation: isolate;
+}
+
+.side-nav-logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 17px;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  line-height: 1;
+  margin-bottom: 40px;
+  display: block;
+  text-align: center;
+}
+
+.side-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.side-nav-link {
+  display: block;
+  padding: 6px 0;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.side-nav-link-label {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink-3);
+  transition: color 0.2s;
+  line-height: 1.4;
+}
+
+.side-nav-link:hover { border-bottom-color: var(--ink-3); }
+.side-nav-link:hover .side-nav-link-label { color: var(--ink-2); }
+
+.side-nav-link.active { border-bottom-color: var(--ink); }
+.side-nav-link.active .side-nav-link-label {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.side-nav-cta {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+  transition: opacity 0.15s;
+  line-height: 1;
+}
+.side-nav-cta:hover { opacity: 0.75; }
+
+/* ── SIDEBAR FOOTER ── */
+.side-nav-footer {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.side-nav-footer a {
+  color: var(--ink-3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.side-nav-footer a:hover { color: var(--ink); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  padding: 0 56px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-inner { width: 100%; }
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 32px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: blink 2.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+.hero-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(52px, 7.5vw, 108px);
+  line-height: 1.0;
+  letter-spacing: -2px;
+  color: var(--ink);
+  margin-bottom: 48px;
+}
+
+.hero-heading em {
+  font-style: italic;
+  color: var(--ink-3);
+}
+
+.hero-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  max-width: 900px;
+}
+
+.hero-desc {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--ink-2);
+}
+
+.hero-desc strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.hero-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-fact {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.hero-fact-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.hero-fact-value {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 56px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.hero-scroll-line {
+  width: 36px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  height: 1px;
+  background: var(--rule);
+  margin: 0 56px;
+}
+
+/* ── SECTION ── */
+.section {
+  padding: 64px 56px;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.section-num {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+/* ── STAT STRIP ── */
+.stat-strip-section {
+  padding: 48px 56px;
+}
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.stat-cell {
+  background: var(--surface);
+  padding: 32px 40px;
+}
+
+.stat-n {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 1;
+  letter-spacing: -2px;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.stat-l {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink-3);
+  line-height: 1.55;
+}
+
+/* ── WORK ── */
+.work-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 32px;
+  padding: 32px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.work-num {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-3);
+  letter-spacing: 0.06em;
+  padding-top: 5px;
+}
+
+.work-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(20px, 2.4vw, 28px);
+  letter-spacing: -0.4px;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.work-desc {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--ink-2);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  color: var(--ink-2);
+}
+
+/* ── SERVICES ── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.service-card.featured {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.service-num {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+.service-card.featured .service-num { color: rgba(255,255,255,0.3); }
+
+.service-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.service-card.featured .service-name { color: #fff; }
+
+.service-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink-2);
+  line-height: 1.7;
+  flex: 1;
+}
+.service-card.featured .service-desc { color: rgba(255,255,255,0.8); }
+
+.service-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+}
+.service-card.featured .service-items { border-top-color: rgba(255,255,255,0.1); }
+
+.service-items li {
+  font-size: 12px;
+  color: var(--ink-2);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.5;
+}
+.service-items li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 1px;
+  background: var(--ink-3);
+}
+.service-card.featured .service-items li { color: rgba(255,255,255,0.7); }
+.service-card.featured .service-items li::before { background: rgba(255,255,255,0.3); }
+
+/* ── STACK ── */
+.stack-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.stack-left-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -1px;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.stack-left-sub {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink-3);
+  line-height: 1.7;
+}
+
+.stack-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 48px;
+}
+
+.stack-group-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 10px;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pill {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px 13px;
+  border-radius: 100px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  color: var(--ink-2);
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+  cursor: default;
+}
+
+.pill:hover {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+/* ── PROCESS (cards — commented out, kept for reference) ── */
+/*
+.process-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.process-card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; position: relative; overflow: hidden; }
+.process-ghost { position: absolute; bottom: -16px; right: 12px; font-family: 'DM Serif Display', serif; font-size: 80px; letter-spacing: -4px; line-height: 1; color: rgba(0,0,0,0.04); user-select: none; pointer-events: none; }
+.process-step { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.process-name { font-family: 'DM Serif Display', serif; font-size: 20px; letter-spacing: -0.2px; color: var(--ink); }
+.process-desc { font-size: 13px; font-weight: 300; color: var(--ink-2); line-height: 1.65; }
+*/
+
+/* ── PROCESS FLOW (left/right vertical, prev version) — commented out ── */
+/*
+.process-flow { display: flex; flex-direction: column; max-width: 680px; }
+.process-flow-step { display: grid; grid-template-columns: 32px 1fr; gap: 0 24px; position: relative; }
+.process-flow-step:not(:last-child) .process-flow-node::after { content: ''; position: absolute; top: 12px; bottom: 0; left: 50%; transform: translateX(-50%); width: 1px; background: var(--rule); z-index: 0; }
+.process-flow-node { display: flex; flex-direction: column; align-items: center; padding-top: 3px; position: relative; align-self: stretch; }
+.process-flow-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--ink); flex-shrink: 0; position: relative; z-index: 1; }
+.process-flow-body { padding-bottom: 40px; }
+.process-flow-step:last-child .process-flow-body { padding-bottom: 0; }
+.process-flow-label { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 6px; }
+.process-flow-name { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 2.8vw, 30px); letter-spacing: -0.4px; line-height: 1.1; color: var(--ink); margin-bottom: 10px; }
+.process-flow-desc { font-size: 14px; font-weight: 300; color: var(--ink-2); line-height: 1.75; max-width: 480px; }
+*/
+
+/* ── PROCESS ZIGZAG ── */
+/*
+ * Centred spine, alternating left/right content:
+ *
+ *   [right body]  ●  [empty]        — odd steps  (Discover, Build, Ship)
+ *   [empty]       ●  [left body]    — even steps  (Plan, Test)
+ *
+ * Grid: [right-col] [spine-col] [left-col]
+ *   right-col  = 1fr  — text for odd steps, empty for even
+ *   spine-col  = auto (dot width + padding)
+ *   left-col   = 1fr  — text for even steps, empty for odd
+ */
+/*
+ * ZIGZAG SPINE TECHNIQUE
+ * The connector line can't span CSS grid rows via ::after.
+ * Instead, we draw it as a single 1px vertical line on the container
+ * using a CSS gradient, positioned at exactly the centre of the spine column.
+ *
+ * Spine column is col 2 of 3 equal-ish cols: [1fr 48px 1fr].
+ * Centre of spine = 50% of container (because the two 1fr cols balance out).
+ * So the line sits at exactly calc(50% - 0.5px) → 50%.
+ *
+ * We stop the line just short of the first dot and resume after the last dot
+ * by using padding on the container: padding-top = dot offset, padding-bottom = 0.
+ */
+.process-zigzag {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+
+/* the continuous spine line — drawn behind everything */
+.process-zigzag::before {
+  content: '';
+  position: absolute;
+  top: 14px;     /* start below first dot centre (padding-top 5px + dot 9px/2 ≈ 9.5 → ~14) */
+  bottom: 5px;   /* stop above last dot centre */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: #a1a1aa;  /* mid-gray — clearly visible on --bg without being heavy */
+  z-index: 0;
+}
+
+.process-zstep {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  align-items: start;
+  position: relative;
+  z-index: 1;   /* sits above the container ::before line */
+}
+
+/* ── spine cell: just holds the dot, centred ── */
+.process-zspine {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;   /* aligns dot with heading cap-height */
+}
+
+.process-zdot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ink);
+  flex-shrink: 0;
+  /* white ring punches out the line behind the dot cleanly */
+  box-shadow: 0 0 0 3px var(--bg);
+}
+
+/* ── content cells ── */
+.process-zbody {
+  padding-bottom: 52px;
+}
+
+.process-zstep:last-child .process-zbody {
+  padding-bottom: 0;
+}
+
+/* z-right: body in LEFT column → right-align against the spine */
+.process-zstep.z-right .process-zbody {
+  padding-right: 36px;
+  text-align: right;
+}
+
+/* z-left: body in RIGHT column → left-align against the spine */
+.process-zstep.z-left .process-zbody {
+  padding-left: 36px;
+  text-align: left;
+}
+
+.process-zempty { /* placeholder cell, no styles needed */ }
+
+.process-zname {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(22px, 2.4vw, 30px);
+  letter-spacing: -0.4px;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.process-zdesc {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--ink-2);
+  line-height: 1.75;
+}
+
+/* ── mobile: collapse to left-aligned single column ── */
+@media (max-width: 900px) {
+  /* override container line for mobile layout */
+  .process-zigzag::before {
+    left: 14px;   /* aligns with dot in left-rail layout */
+    transform: none;
+  }
+
+  .process-zstep {
+    grid-template-columns: 28px 1fr;
+    grid-template-areas: 'spine body';
+    align-items: start;
+  }
+
+  .process-zstep .process-zspine  { grid-area: spine; }
+
+  .process-zstep.z-right .process-zbody,
+  .process-zstep.z-left  .process-zbody {
+    grid-area: body;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 0;
+  }
+
+  .process-zstep .process-zempty { display: none; }
+}
+
+/* ── CTA ── */
+.cta-section {
+  padding: 80px 56px 72px;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 48px;
+}
+
+.cta-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 20px;
+}
+
+.cta-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(56px, 9vw, 130px);
+  letter-spacing: -4px;
+  line-height: 1.0;
+  color: var(--ink);
+}
+
+.cta-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  padding-bottom: 6px;
+}
+
+.cta-email {
+  font-size: 13px;
+  color: var(--ink-3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.cta-email:hover { color: var(--ink); }
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--ink);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.cta-btn:hover { opacity: 0.75; }
+.cta-btn svg { transition: transform 0.15s; }
+.cta-btn:hover svg { transform: translateX(3px); }
+
+/* ── RESPONSIVE: 1024px (laptop) ── */
+@media (max-width: 1024px) {
+  .hero-heading { letter-spacing: -1.5px; }
+
+  .stack-layout { grid-template-columns: 1fr; gap: 36px; }
+
+  .services-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .cta-section { grid-template-columns: 1fr; padding: 64px 56px 56px; }
+  .cta-right { align-items: flex-start; }
+}
+
+/* ── RESPONSIVE: 900px (mobile) ── */
+@media (max-width: 900px) {
+  :root { --nav-w: 0px; }
+
+  body { padding-left: 0; }
+
+  .side-nav { display: none; }
+
+  .hero { padding: 0 24px; }
+  .hero-heading { letter-spacing: -1.5px; }
+  .hero-cols { grid-template-columns: 1fr; gap: 32px; }
+
+  .divider { margin: 0 24px; }
+  .section { padding: 56px 24px; }
+  .stat-strip-section { padding: 40px 24px; }
+
+  .stat-strip { grid-template-columns: 1fr; }
+  .stat-cell { padding: 28px 24px; }
+
+  .work-item { grid-template-columns: 1fr; gap: 8px; }
+  .work-num { display: none; }
+
+  .services-grid { grid-template-columns: 1fr; }
+
+  .stack-layout { grid-template-columns: 1fr; gap: 36px; }
+  .stack-groups { grid-template-columns: 1fr 1fr; }
+
+  .cta-section { grid-template-columns: 1fr; padding: 64px 24px 56px; }
+  .cta-right { align-items: flex-start; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- LEFT SIDEBAR NAV -->
+<nav class="side-nav" aria-label="Site navigation">
+  <a href="#" class="side-nav-logo" aria-label="Angelo — home">Angelo.</a>
+
+  <div class="side-nav-links">
+    <a href="#work"     class="side-nav-link" data-section="work">
+      <span class="side-nav-link-label">Work</span>
+    </a>
+    <a href="#services" class="side-nav-link" data-section="services">
+      <span class="side-nav-link-label">Services</span>
+    </a>
+    <a href="#stack"    class="side-nav-link" data-section="stack">
+      <span class="side-nav-link-label">Stack</span>
+    </a>
+    <a href="#process"  class="side-nav-link" data-section="process">
+      <span class="side-nav-link-label">Process</span>
+    </a>
+    <a href="#contact"  class="side-nav-link" data-section="contact">
+      <span class="side-nav-link-label">Contact</span>
+    </a>
+    <a href="#contact" class="side-nav-cta">Let's talk</a>
+  </div>
+
+  <div class="side-nav-footer">
+    <span>&copy; 2026 Angelo</span>
+    <a href="https://www.linkedin.com/in/john-angelo-castillo-barot-655787130" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://twitter.com/0x4ngelo" target="_blank" rel="noopener">Twitter / X</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+
+    <div class="hero-status reveal d1">
+      <span class="status-dot"></span>
+      Available for your projects
+    </div>
+
+    <h1 class="hero-heading reveal d2">
+      Full stack engineer.<br>
+      <em>8 years in.</em>
+    </h1>
+
+    <div class="hero-cols">
+      <p class="hero-desc reveal d3">
+        I build products <strong>end-to-end</strong> — database to deployed UI. I work best when I own the problem: making the right technical calls and shipping something that holds up at scale.
+      </p>
+
+      <div class="hero-facts reveal d4">
+        <div class="hero-fact">
+          <span class="hero-fact-label">Based</span>
+          <span class="hero-fact-value">Philippines · Remote Worldwide</span>
+        </div>
+        <div class="hero-fact">
+          <span class="hero-fact-label">Available</span>
+          <span class="hero-fact-value">Freelance &amp; Contract</span>
+        </div>
+        <div class="hero-fact">
+          <span class="hero-fact-label">Domains</span>
+          <span class="hero-fact-value">Fintech · Logistics · Consumer Apps · Marketing</span>
+        </div>
+        <div class="hero-fact">
+          <span class="hero-fact-label">Also into</span>
+          <span class="hero-fact-value">AI-assisted workflows · LLM Integrations</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="hero-scroll-line"></span>
+    Scroll
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- QUICK STATS -->
+<section class="stat-strip-section" aria-label="Quick stats">
+  <div class="stat-strip reveal">
+    <div class="stat-cell">
+      <span class="stat-n">8+</span>
+      <p class="stat-l">Years building real products<br>across fintech, logistics, and consumer apps</p>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-n">4+</span>
+      <p class="stat-l">Industries shipped in —<br>fintech, logistics, consumer apps &amp; marketing</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Selected Work</h2>
+  </div>
+
+  <div class="work-list">
+
+    <article class="work-item reveal">
+      <span class="work-num">001</span>
+      <div class="work-content">
+        <h3 class="work-name">Stablecoin Business Finance Platform</h3>
+        <p class="work-desc">
+          A platform for corporate cards, cross-border payments, and expense management used by global businesses running multi-currency treasuries. I work on this full time — building and maintaining product features across the full stack in a regulated financial environment where transactions are real and mistakes cost money.
+        </p>
+        <div class="work-tags">
+          <span class="tag">React</span>
+          <span class="tag">NestJS</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Fintech</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="work-item reveal d1">
+      <span class="work-num">002</span>
+      <div class="work-content">
+        <h3 class="work-name">AI Browser Extension</h3>
+        <p class="work-desc">
+          Built a Chrome extension that reads the content of your active tab and lets you have an AI conversation about it — summarise articles, ask questions, create shareable insights without leaving the browser. It grew to over 10,000 active users on the Chrome Web Store.
+        </p>
+        <div class="work-tags">
+          <span class="tag">Chrome Extension</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">AI / LLM</span>
+          <span class="tag">10k+ users</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="work-item reveal d2">
+      <span class="work-num">003</span>
+      <div class="work-content">
+        <h3 class="work-name">Outdoor Adventure Booking Platform</h3>
+        <p class="work-desc">
+          Designed and built the full backend for an outdoor adventure company's mobile app — event listings, trip slots, bookings, and user accounts. Still live and actively used.
+        </p>
+        <div class="work-tags">
+          <span class="tag">Laravel</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Backoffice</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="work-item reveal d3">
+      <span class="work-num">004</span>
+      <div class="work-content">
+        <h3 class="work-name">Regional On-Demand Delivery Platform</h3>
+        <p class="work-desc">
+          Built a delivery platform from nothing — customer mobile app, merchant portal, admin dashboard, and all backend APIs. Every technical decision was mine: architecture, stack, infrastructure, deployment. Went from zero to live with real customers and delivery riders on the road.
+        </p>
+        <div class="work-tags">
+          <span class="tag">React Native</span>
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">0 → live</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="work-item reveal d4">
+      <span class="work-num">005</span>
+      <div class="work-content">
+        <h3 class="work-name">Major Philippine Bank — Website Rebuild</h3>
+        <p class="work-desc">
+          Rebuilt the public-facing website of one of the Philippines' largest banks from the ground up. High-visibility project, regulated environment, delivered on time — then handed over cleanly to the client's internal team who have maintained it since.
+        </p>
+        <div class="work-tags">
+          <span class="tag">Frontend</span>
+          <span class="tag">Fintech</span>
+          <span class="tag">Delivered &amp; handed over</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <h2 class="section-title">What I Do</h2>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-num">01</span>
+      <h3 class="service-name">Backend &amp; API Engineering</h3>
+      <p class="service-desc">Scalable APIs and data pipelines built to grow without breaking. Shipped in fintech, logistics, marketing, and consumer apps.</p>
+      <ul class="service-items">
+        <li>NestJS · Node.js · PostgreSQL</li>
+        <li>REST, GraphQL, WebSocket</li>
+        <li>Redis, Event-driven Architecture</li>
+        <li>Auth, Billing, Permissions</li>
+      </ul>
+    </div>
+
+    <div class="service-card featured reveal d1">
+      <span class="service-num">02</span>
+      <h3 class="service-name">Frontend &amp; Product UI</h3>
+      <p class="service-desc">Interfaces that load fast, work on any device, and don't fall apart under real users.</p>
+      <ul class="service-items">
+        <li>React · Next.js · React Native</li>
+        <li>TypeScript, Styled Components</li>
+        <li>Zustand, React Query, Zod</li>
+        <li>Responsive &amp; Accessible</li>
+      </ul>
+    </div>
+
+    <div class="service-card reveal d2">
+      <span class="service-num">03</span>
+      <h3 class="service-name">Full Product Ownership</h3>
+      <p class="service-desc">You have an idea. I'll own the whole thing — architecture, build, and ship. No hand-holding needed on my end.</p>
+      <ul class="service-items">
+        <li>Architecture &amp; System design</li>
+        <li>AWS · GCP · Docker · CI/CD</li>
+        <li>Zero to live delivery</li>
+        <li>Handover &amp; Documentation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STACK -->
+<section class="section" id="stack">
+  <div class="section-header reveal">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Stack</h2>
+  </div>
+
+  <div class="stack-layout">
+    <div class="reveal">
+      <p class="stack-left-title">Tools<br>I trust.</p>
+      <p class="stack-left-sub">Picked for the job, not the CV. Most have been used in production, under pressure, at scale.</p>
+    </div>
+
+    <div class="stack-groups reveal d1">
+      <div>
+        <p class="stack-group-label">Frontend</p>
+        <div class="pill-row">
+          <span class="pill">React</span>
+          <span class="pill">Next.js</span>
+          <span class="pill">React Native</span>
+          <span class="pill">Expo</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">Styled Components</span>
+          <span class="pill">Zustand</span>
+          <span class="pill">React Query</span>
+          <span class="pill">Zod</span>
+        </div>
+      </div>
+
+      <div>
+        <p class="stack-group-label">Backend</p>
+        <div class="pill-row">
+          <span class="pill">Node.js</span>
+          <span class="pill">NestJS</span>
+          <span class="pill">Express</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">WebSocket</span>
+          <span class="pill">Redis</span>
+          <span class="pill">REST</span>
+          <span class="pill">GraphQL</span>
+          <span class="pill">Zod</span>
+        </div>
+      </div>
+
+      <div>
+        <p class="stack-group-label">Databases</p>
+        <div class="pill-row">
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">MongoDB</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">Prisma</span>
+        </div>
+      </div>
+
+      <div>
+        <p class="stack-group-label">Infra &amp; Cloud</p>
+        <div class="pill-row">
+          <span class="pill">AWS</span>
+          <span class="pill">GCP</span>
+          <span class="pill">Firebase</span>
+          <span class="pill">Docker</span>
+          <span class="pill">CI/CD</span>
+          <span class="pill">Shell scripting</span>
+        </div>
+      </div>
+
+      <div>
+        <p class="stack-group-label">Testing &amp; Tooling</p>
+        <div class="pill-row">
+          <span class="pill">Jest</span>
+          <span class="pill">Vitest</span>
+          <span class="pill">Git</span>
+          <span class="pill">Swagger</span>
+          <span class="pill">Postman</span>
+          <span class="pill">Figma</span>
+        </div>
+      </div>
+
+      <div>
+        <p class="stack-group-label">Exploring</p>
+        <div class="pill-row">
+          <span class="pill">Python</span>
+          <span class="pill">Go</span>
+          <span class="pill">AI / LLM APIs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="section-header reveal">
+    <span class="section-num">04</span>
+    <h2 class="section-title">How I Work</h2>
+  </div>
+
+  <!-- ── PROCESS ZIGZAG ── -->
+  <!--
+    z-right = content appears on the RIGHT of the spine  (Discover, Build, Ship)
+    z-left  = content appears on the LEFT  of the spine  (Plan, Test)
+
+    Grid cols: [right-text 1fr] [spine 40px] [left-text 1fr]
+    z-right: body in col 1 (right-aligned), empty in col 3
+    z-left:  empty in col 1, body in col 3 (left-aligned)
+  -->
+  <div class="process-zigzag">
+
+    <!-- 01 Discover — RIGHT -->
+    <div class="process-zstep z-right reveal">
+      <div class="process-zbody">
+        <h3 class="process-zname">Discover</h3>
+        <p class="process-zdesc">
+          I dig into the real problem before writing a line of code.
+          <br />
+          What you describe and what you need aren't always the same thing.
+        </p>
+      </div>
+      <div class="process-zspine"><span class="process-zdot"></span></div>
+      <div class="process-zempty"></div>
+    </div>
+
+    <!-- 02 Plan — LEFT -->
+    <div class="process-zstep z-left reveal d1">
+      <div class="process-zempty"></div>
+      <div class="process-zspine"><span class="process-zdot"></span></div>
+      <div class="process-zbody">
+        <h3 class="process-zname">Plan</h3>
+        <p class="process-zdesc">
+          Clear scope, right stack, honest timeline.
+          <br />
+          You know exactly what's being built and when before anything starts.
+        </p>
+      </div>
+    </div>
+
+    <!-- 03 Build — RIGHT -->
+    <div class="process-zstep z-right reveal d2">
+      <div class="process-zbody">
+        <h3 class="process-zname">Build</h3>
+        <p class="process-zdesc">
+          Weekly progress you can see.
+          <br />
+          Working software, not status updates and slide decks.
+        </p>
+      </div>
+      <div class="process-zspine"><span class="process-zdot"></span></div>
+      <div class="process-zempty"></div>
+    </div>
+
+    <!-- 04 Test — LEFT -->
+    <div class="process-zstep z-left reveal d3">
+      <div class="process-zempty"></div>
+      <div class="process-zspine"><span class="process-zdot"></span></div>
+      <div class="process-zbody">
+        <h3 class="process-zname">Test</h3>
+        <p class="process-zdesc">
+          Covered before it ships.
+          <br />
+          Unit tests, integration tests, real-world edge cases — not just happy paths.
+        </p>
+      </div>
+    </div>
+
+    <!-- 05 Ship — RIGHT -->
+    <div class="process-zstep z-right reveal d4">
+      <div class="process-zbody">
+        <h3 class="process-zname">Ship</h3>
+        <p class="process-zdesc">
+          Deployed, documented, handed over properly.
+          <br />
+          No loose ends, no dependency on me unless you want one.
+        </p>
+      </div>
+      <div class="process-zspine"><span class="process-zdot"></span></div>
+      <div class="process-zempty"></div>
+    </div>
+
+  </div>
+
+  <!-- OLD VERTICAL FLOW (kept for reference)
+  <div class="process-flow">...</div>
+  -->
+
+  <!-- OLD CARDS (kept for reference)
+  <div class="process-grid">
+    <div class="process-card reveal">
+      <span class="process-step">Step 01</span>
+      <h3 class="process-name">Discover</h3>
+      <p class="process-desc">I dig into the real problem before writing a line of code. What you describe and what you need aren't always the same thing.</p>
+      <div class="process-ghost" aria-hidden="true">01</div>
+    </div>
+    <div class="process-card reveal d1">
+      <span class="process-step">Step 02</span>
+      <h3 class="process-name">Plan</h3>
+      <p class="process-desc">Clear scope, right stack, honest timeline. You know exactly what's being built and when before anything starts.</p>
+      <div class="process-ghost" aria-hidden="true">02</div>
+    </div>
+    <div class="process-card reveal d2">
+      <span class="process-step">Step 03</span>
+      <h3 class="process-name">Build</h3>
+      <p class="process-desc">Weekly progress you can see. Working software, not status updates and slide decks.</p>
+      <div class="process-ghost" aria-hidden="true">03</div>
+    </div>
+    <div class="process-card reveal d3">
+      <span class="process-step">Step 04</span>
+      <h3 class="process-name">Test</h3>
+      <p class="process-desc">Covered before it ships. Unit tests, integration tests, real-world edge cases — not just happy paths.</p>
+      <div class="process-ghost" aria-hidden="true">04</div>
+    </div>
+    <div class="process-card reveal d4">
+      <span class="process-step">Step 05</span>
+      <h3 class="process-name">Ship</h3>
+      <p class="process-desc">Deployed, documented, handed over properly. No loose ends, no dependency on me unless you want one.</p>
+      <div class="process-ghost" aria-hidden="true">05</div>
+    </div>
+  </div>
+  -->
+
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div>
+    <p class="cta-eyebrow reveal">Start a project</p>
+    <h2 class="cta-heading reveal d1">
+      Let's build<br>
+      something<br>
+      real.
+    </h2>
+  </div>
+  <div class="cta-right reveal d2">
+    <a href="mailto:barot.johnangelo@gmail.com" class="cta-email">barot.johnangelo@gmail.com</a>
+    <a href="mailto:barot.johnangelo@gmail.com" class="cta-btn">
+      Get in touch
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<script>
+  // ── SCROLL REVEAL ──
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.06, rootMargin: '0px 0px -24px 0px' }
+  );
+  document.querySelectorAll('.reveal').forEach(el => { revealObserver.observe(el); });
+
+  // Fire immediately for elements already in view
+  setTimeout(() => {
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add('in');
+      }
+    });
+  }, 60);
+
+  // ── ACTIVE SECTION TRACKING ──
+  const sections = ['work', 'services', 'stack', 'process', 'contact'];
+
+  const navLinks = {};
+  sections.forEach(id => {
+    navLinks[id] = document.querySelector(`.side-nav-link[data-section="${id}"]`);
+  });
+
+  let currentActive = null;
+
+  function setActive(id) {
+    if (id === currentActive) return;
+    currentActive = id;
+    sections.forEach(s => {
+      navLinks[s]?.classList.toggle('active', s === id);
+    });
+    history.replaceState(null, '', id ? `#${id}` : location.pathname);
+  }
+
+  const intersecting = new Set();
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          intersecting.add(e.target.id);
+        } else {
+          intersecting.delete(e.target.id);
+        }
+      });
+
+      for (const id of sections) {
+        if (intersecting.has(id)) {
+          setActive(id);
+          return;
+        }
+      }
+
+      // Nothing intersecting (hero or between sections) — clear hash
+      sections.forEach(s => {
+        navLinks[s]?.classList.remove('active');
+      });
+      if (currentActive !== null) {
+        currentActive = null;
+        history.replaceState(null, '', location.pathname);
+      }
+    },
+    {
+      rootMargin: '-20% 0px -20% 0px',
+      threshold: 0
+    }
+  );
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) sectionObserver.observe(el);
+  });
+
+  // When scrolled to the bottom, the last section may never hit the rootMargin
+  // detection zone — force-activate it.
+  function checkBottom() {
+    const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+    if (atBottom) setActive(sections[sections.length - 1]);
+  }
+  window.addEventListener('scroll', checkBottom, { passive: true });
+  checkBottom(); // run once on load in case page loads already at bottom
+</script>
+
+</body>
+</html>
